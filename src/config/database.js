@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
   dialect: 'postgres',
   host: 'localhost',
   port: 5432,
@@ -7,7 +7,6 @@ module.export = {
   database: 'devburguer',
   define: {
     timestamps: true,
-    underscored: true,
     underscored: true,
     underscoredAll: true,
   },
