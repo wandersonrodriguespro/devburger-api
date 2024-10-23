@@ -19,10 +19,13 @@ routes.use(authMiddleware);
 
 routes.post('/products', upload.single('file'), ProductController.store);
 routes.get('/products', authMiddleware, ProductController.index);
+routes.put('/products/:id', upload.single('file'), ProductController.update);
 
 routes.post('/categories', CategoryController.store);
 routes.get('/categories', CategoryController.index);
 
 routes.post('/orders', OrderControler.store);
+routes.get('/orders', OrderControler.index);
+routes.put('/orders/:id', OrderControler.update);
 
 export default routes;
